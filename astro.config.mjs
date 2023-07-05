@@ -13,7 +13,6 @@ export default defineConfig({
   // ...
   adapter: netlify(),
   output: 'hybrid',
-  site: 'https://astro-starter-pack.netlify.app',
   styles: [{
     // Apply Tailwind CSS
     postcss: {
