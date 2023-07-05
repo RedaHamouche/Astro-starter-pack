@@ -2,10 +2,10 @@
 import fetchApi from '../../lib/strapi'
 import type ArticleInterface from '../interfaces/article';
 import ArticleLink from '../components/ArticleLink.astro';
-const articles = await fetchApi<ArticleInterface[]>({
-  endpoint: 'articles',
-  wrappedByKey: 'data',
-});
+// const articles = await fetchApi<ArticleInterface[]>({
+//   endpoint: 'articles',
+//   wrappedByKey: 'data',
+// });
 ---
 
 <!DOCTYPE html>
@@ -17,9 +17,10 @@ const articles = await fetchApi<ArticleInterface[]>({
   <body>
     <main>
       <ul>
-        {articles.map((article) => (
+        Articles strapi incoming
+        <!-- {articles.map((article) => (
           <ArticleLink article={article} />
-        ))}
+        ))} -->
       </ul>
     </main>
   </body>
