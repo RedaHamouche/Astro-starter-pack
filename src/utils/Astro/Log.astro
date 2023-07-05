@@ -1,0 +1,20 @@
+---
+const { props = 'Welcome, world!' } = Astro.props;
+---
+
+<!-- Store the message prop as a data attribute. -->
+<astro-greet data-props={props} aria-label="This should be use in dev mode only">
+  <x/>
+</astro-greet>
+
+<script>
+  class Log extends HTMLElement {
+    constructor() {
+        super();
+        const props = this.dataset.props;
+        console.log(props);
+      }
+  }
+
+  customElements.define('astro-greet', Log);
+</script>

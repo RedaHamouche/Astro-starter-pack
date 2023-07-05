@@ -1,0 +1,27 @@
+---
+import fetchApi from '../../lib/strapi'
+import type ArticleInterface from '../interfaces/article';
+import ArticleLink from '../components/ArticleLink.astro';
+const articles = await fetchApi<ArticleInterface[]>({
+  endpoint: 'articles',
+  wrappedByKey: 'data',
+});
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strapi & Astro</title>
+  </head>
+
+  <body>
+    <main>
+      <ul>
+        {articles.map((article) => (
+          <ArticleLink article={article} />
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>
+

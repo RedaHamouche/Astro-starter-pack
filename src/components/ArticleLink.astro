@@ -1,0 +1,8 @@
+---
+const { article } = Astro.props;
+console.log('this is it::', article);
+
+---
+<a href={`/blog/${article.attributes.slug}/`}>
+	{article.attributes.title}
+</a>

@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+	<Nav/>
+		<h1>Start Pack<span class="text-gradient">Astro Erik Julie 2</span></h1>
+		<a href="/articles">articles</a>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		color: green;
+	}
+</style>
